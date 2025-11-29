@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Forgive Me?</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#yes {
+  background: #00e676;
+  color: black;
+}
+#no {
+  background: #444;
+  color: #999;
+  pointer-events: none;
+}
+#msg {
+  display: none;
+  margin-top: 20px;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<h1>Are you forgiving me?</h1>
+<p>I am really sorry. Please choose one option:</p>
+
+<button id="yes">Yes, I forgive you 💛</button>
+<button id="no">No</button>
+
+<div id="msg">Thank you… it means a lot 💛🙂</div>
+
+<script>
+document.getElementById("yes").onclick = function() {
+  document.getElementById("msg").style.display = "block";
+  this.disabled = true;
+  this.innerText = "Forgiven ✓";
+};
+</script>
+
+</body>
+</html>
